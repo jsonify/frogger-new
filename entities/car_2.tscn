@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbb80jkccv4uj"]
+
+[ext_resource type="PackedScene" uid="uid://vqfnpfpa17gb" path="res://entities/car_obstacle.tscn" id="1_srbwp"]
+[ext_resource type="Script" path="res://entities/car_2.gd" id="2_atd4t"]
+
+[node name="Car2" instance=ExtResource("1_srbwp")]
+script = ExtResource("2_atd4t")
+speed_factor = -2.5
+
+[node name="Sprite2D" parent="." index="0"]
+region_rect = Rect2(1984, 1536, 192, 128)

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://vqfnpfpa17gb"]
+
+[ext_resource type="Texture2D" uid="uid://rrbp0a4a3kxn" path="res://assets/City_Sprites.png" id="1_kh76t"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mt7tk"]
+size = Vector2(140, 70)
+
+[node name="Car_Obstacle" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -27)
+texture = ExtResource("1_kh76t")
+region_enabled = true
+region_rect = Rect2(2176, 1280, 192, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_mt7tk")

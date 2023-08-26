@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://e3ye34k5skvm"]
+
+[ext_resource type="PackedScene" uid="uid://dalyt1fv1lndk" path="res://entities/obstacle.tscn" id="1_cmxlx"]
+[ext_resource type="Script" path="res://entities/turtle_small.gd" id="2_6momg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5bik2"]
+size = Vector2(120, 60)
+
+[node name="Turtle_Small" instance=ExtResource("1_cmxlx")]
+script = ExtResource("2_6momg")
+
+[node name="Sprite2D" parent="." index="0"]
+region_rect = Rect2(1280, 1664, 64, 64)
+
+[node name="Sprite2D2" parent="." index="1"]
+region_rect = Rect2(1280, 1664, 64, 64)
+
+[node name="CollisionShape2D" parent="." index="2"]
+shape = SubResource("RectangleShape2D_5bik2")

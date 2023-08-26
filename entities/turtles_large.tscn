@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0yrd2jrv3yri"]
+
+[ext_resource type="PackedScene" uid="uid://dalyt1fv1lndk" path="res://entities/obstacle.tscn" id="1_74xvd"]
+[ext_resource type="Script" path="res://entities/turtles_large.gd" id="2_3sbjv"]
+[ext_resource type="Texture2D" uid="uid://rrbp0a4a3kxn" path="res://assets/City_Sprites.png" id="2_5dl21"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_el6lw"]
+size = Vector2(182, 58)
+
+[node name="Turtles_Large" instance=ExtResource("1_74xvd")]
+script = ExtResource("2_3sbjv")
+speed_factor = -2.0
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(-64, 0)
+region_rect = Rect2(1280, 1664, 64, 64)
+
+[node name="Sprite2D2" parent="." index="1"]
+position = Vector2(0, 0)
+region_rect = Rect2(1280, 1664, 64, 64)
+
+[node name="Sprite2D3" type="Sprite2D" parent="." index="2"]
+position = Vector2(63, 0)
+texture = ExtResource("2_5dl21")
+region_enabled = true
+region_rect = Rect2(1280, 1664, 64, 64)
+
+[node name="CollisionShape2D" parent="." index="3"]
+shape = SubResource("RectangleShape2D_el6lw")

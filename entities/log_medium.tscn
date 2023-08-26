@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dkv5m2ne0n7hn"]
+
+[ext_resource type="PackedScene" uid="uid://dalyt1fv1lndk" path="res://entities/obstacle.tscn" id="1_8sw6o"]
+[ext_resource type="Script" path="res://entities/log_medium.gd" id="2_ol30v"]
+[ext_resource type="Texture2D" uid="uid://rrbp0a4a3kxn" path="res://assets/City_Sprites.png" id="3_kcxtj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ven6x"]
+size = Vector2(194, 52)
+
+[node name="LogMedium" instance=ExtResource("1_8sw6o")]
+script = ExtResource("2_ol30v")
+speed_factor = -1.2
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(-63, 0)
+
+[node name="Sprite2D2" parent="." index="1"]
+position = Vector2(1, 0)
+
+[node name="Sprite2D3" type="Sprite2D" parent="." index="2"]
+position = Vector2(65, 0)
+texture = ExtResource("3_kcxtj")
+region_enabled = true
+region_rect = Rect2(960, 1024, 64, 64)
+
+[node name="CollisionShape2D" parent="." index="3"]
+shape = SubResource("RectangleShape2D_ven6x")

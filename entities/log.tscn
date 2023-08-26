@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqrxgjmumscn0"]
+
+[ext_resource type="Script" path="res://entities/log.gd" id="1_s6x86"]
+[ext_resource type="Texture2D" uid="uid://rrbp0a4a3kxn" path="res://assets/City_Sprites.png" id="1_srx0e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_thsmf"]
+size = Vector2(128, 52)
+
+[node name="LogSmall" type="CharacterBody2D"]
+script = ExtResource("1_s6x86")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_thsmf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-32, 0)
+texture = ExtResource("1_srx0e")
+region_enabled = true
+region_rect = Rect2(960, 1024, 64, 64)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(32, 0)
+texture = ExtResource("1_srx0e")
+region_enabled = true
+region_rect = Rect2(960, 1024, 64, 64)

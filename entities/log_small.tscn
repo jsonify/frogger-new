@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyu6rh4ewvwxq"]
+
+[ext_resource type="PackedScene" uid="uid://dalyt1fv1lndk" path="res://entities/obstacle.tscn" id="1_qcoaf"]
+[ext_resource type="Script" path="res://entities/log_small.gd" id="2_u3r45"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_24i0p"]
+size = Vector2(128, 52)
+
+[node name="log_small" instance=ExtResource("1_qcoaf")]
+script = ExtResource("2_u3r45")
+speed_factor = 1.5
+
+[node name="CollisionShape2D" parent="." index="2"]
+shape = SubResource("RectangleShape2D_24i0p")
